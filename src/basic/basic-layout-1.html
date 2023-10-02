@@ -10,36 +10,35 @@
     #basic-layout-1 {
       display: grid;
       grid-template-areas:
-        "header nav"
-        "aside main"
-        "footer footer";
-      grid-template-rows: 150px 1fr 150px ;
-      grid-template-columns: 1fr;
-    }
-
-    header,
-    nav {
-      background-color: lightcoral;
-      color: crimson;
+        "top top top top"
+        "left right right right"
+        "bottom bottom bottom bottom";
+      ;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
       text-align: center;
     }
 
-    a {
-      text-decoration: underline;
+    header {
+      grid-area: top;
+      background-color: lightcoral;
+      color: crimson;
+    }
+
+    nav {
+      grid-area: left;
+      background-color: aquamarine;
       color: seagreen;
     }
 
     main {
+      grid-area: right;
       background-color: bisque;
       color: orange;
     }
 
-    aside {
-      background-color: beige;
-      color: black;
-    }
-
     footer {
+      grid-area: bottom;
       background-color: lightcyan;
       color: blue;
     }
@@ -51,7 +50,6 @@
     <h1>Basic Layout 1</h1>
   </header>
   <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-  <aside> Hier komen articles</aside>
   <main> Hier komt tekst</main>
   <footer> Hier komt footer tekst</footer>
 </body>

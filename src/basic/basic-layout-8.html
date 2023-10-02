@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Layout 8</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
-  </head>
-  <body id="basic-layout-8">
-    <header><h1>Basic Layout 8</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Layout 8</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #basic-layout-8 {
+      display: grid;
+      grid-template-areas:
+        "header header nav"
+        "aside main footer";
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+    }
+
+    header,
+    nav {
+      background-color: lightcoral;
+      color: crimson;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: underline;
+      color: seagreen;
+    }
+
+    main {
+      background-color: bisque;
+      color: orange;
+    }
+
+    footer {
+      background-color: lightcyan;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body id="basic-layout-8">
+  <header>
+    <h1>Basic Layout 8</h1>
+  </header>
+  <nav><a href="../index.html">Terug naar het overzicht</a></nav>
+  <aside>aside</aside>
+  <main>main</main>
+  <footer> footer</footer>
+</body>
+
 </html>

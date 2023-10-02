@@ -10,30 +10,34 @@
     #basic-layout-8 {
       display: grid;
       grid-template-areas:
-        "header header nav"
-        "aside main footer";
-      grid-template-rows: auto;
-      grid-template-columns: 1fr;
-    }
-
-    header,
-    nav {
-      background-color: lightcoral;
-      color: crimson;
+        "top top top "
+        "left right bottom";
+      ;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 3fr;
       text-align: center;
     }
 
-    a {
-      text-decoration: underline;
+    header {
+      grid-area: top;
+      background-color: lightcoral;
+      color: crimson;
+    }
+
+    nav {
+      grid-area: left;
+      background-color: aquamarine;
       color: seagreen;
     }
 
     main {
+      grid-area: right;
       background-color: bisque;
       color: orange;
     }
 
     footer {
+      grid-area: bottom;
       background-color: lightcyan;
       color: blue;
     }
@@ -45,7 +49,6 @@
     <h1>Basic Layout 8</h1>
   </header>
   <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-  <aside>aside</aside>
   <main>main</main>
   <footer> footer</footer>
 </body>

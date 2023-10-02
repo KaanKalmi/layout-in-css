@@ -6,13 +6,46 @@
     <title>Basic Layout 4</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
-      /* Doe hier jouw ding! */
+      #basic-layout-4 {
+      display: grid;
+      grid-template-areas:
+        "top left "
+        "middle right";
+      ;
+      grid-template-columns: 1fr 300px;
+      grid-template-rows: 1fr 1fr;
+      text-align: center;
+    }
+
+    header {
+      grid-area: top;
+      background-color: lightcoral;
+      color: crimson;
+    }
+
+    nav {
+      grid-area: left;
+      background-color: aquamarine;
+      color: seagreen;
+    }
+
+    main {
+      grid-area: middle;
+      background-color: bisque;
+      color: orange;
+    }
+
+    footer {
+      grid-area: right;
+      background-color: lightcyan;
+      color: blue;
+    }
     </style>
   </head>
   <body id="basic-layout-4">
     <header><h1>Basic Layout 4</h1></header>
     <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
+    <main>main</main>
+    <footer>footer</footer>
   </body>
 </html>

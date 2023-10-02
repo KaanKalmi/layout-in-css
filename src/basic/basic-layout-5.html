@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Layout 5</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
-  </head>
-  <body id="basic-layout-5">
-    <header><h1>Basic Layout 5</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Layout 5</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #basic-layout-5 {
+      display: grid;
+      grid-template-areas:
+        "top top  "
+        "left middle"
+        "left right";
+      ;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 1fr 100px;
+      text-align: center;
+    }
+
+    header {
+      grid-area: top;
+      background-color: lightcoral;
+      color: crimson;
+    }
+
+    nav {
+      grid-area: left;
+      background-color: aquamarine;
+      color: seagreen;
+    }
+
+    main {
+      grid-area: middle;
+      background-color: bisque;
+      color: orange;
+    }
+
+    footer {
+      grid-area: right;
+      background-color: lightcyan;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body id="basic-layout-5">
+  <header>
+    <h1>Basic Layout 5</h1>
+  </header>
+  <nav><a href="../index.html">Terug naar het overzicht</a></nav>
+  <main>main</main>
+  <footer>footer</footer>
+</body>
+
 </html>

@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Layout 1</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
-  </head>
-  <body id="basic-layout-1">
-    <header><h1>Basic Layout 1</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Layout 1</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #basic-layout-1 {
+      display: grid;
+      grid-template-areas:
+        "header nav"
+        "aside main"
+        "footer footer";
+      grid-template-rows: 150px 1fr 150px ;
+      grid-template-columns: 1fr;
+    }
+
+    header,
+    nav {
+      background-color: lightcoral;
+      color: crimson;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: underline;
+      color: seagreen;
+    }
+
+    main {
+      background-color: bisque;
+      color: orange;
+    }
+
+    aside {
+      background-color: beige;
+      color: black;
+    }
+
+    footer {
+      background-color: lightcyan;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body id="basic-layout-1">
+  <header>
+    <h1>Basic Layout 1</h1>
+  </header>
+  <nav><a href="../index.html">Terug naar het overzicht</a></nav>
+  <aside> Hier komen articles</aside>
+  <main> Hier komt tekst</main>
+  <footer> Hier komt footer tekst</footer>
+</body>
+
 </html>
